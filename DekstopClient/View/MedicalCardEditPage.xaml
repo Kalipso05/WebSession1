@@ -1,0 +1,40 @@
+﻿<Page x:Class="DekstopClient.View.MedicalCardEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DekstopClient.View"
+      mc:Ignorable="d" 
+      FontFamily="Cascadia code"
+      d:DesignHeight="550" d:DesignWidth="1000"
+      Loaded="Page_Loaded"
+      Title="MedicalCardEditPage">
+
+    <Grid>
+        <StackPanel Width="400"
+                    Height="520"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            
+            <Label Content="Выберите доктора:"/>
+            <ComboBox x:Name="cmbSelectedDoctor" DisplayMemberPath="LastName" SelectionChanged="cmbSelectedDoctor_SelectionChanged"/>
+            <Label Content="Сбор анамнеза"/>
+            <TextBox x:Name="txbAnamnesis" Height="30" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+            <Label Content="Описание симптоматики"/>
+            <TextBox x:Name="txbSymptoms" Height="30" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+            <Label Content="Диагноз"/>
+            <TextBox x:Name="txbDiagnos" Height="30" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+            <Label Content="Рекомендации по лечению"/>
+            <TextBox x:Name="txbRecomendation" Height="30" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+            <Label Content="Формирование рецепта" Background="DarkOrange" Foreground="White" Margin="0, 10"/>
+            <Label Content="Название"/>
+            <TextBox x:Name="txbReceptionName" Height="20"/>
+            <Label Content="Дозировка"/>
+            <TextBox x:Name="txbReceptionDosage" Height="20"/>
+            <Label Content="Формат приема"/>
+            <TextBox x:Name="txbReceptionFormat" Height="20"/>
+            <Button Content="Добавить" Margin="0, 10" Height="25" Click="ButtonAddMedicalCard_Click"/>
+            <Button Content="Назад" Margin="0" Height="25" Click="ButtonBack_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
